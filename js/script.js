@@ -3,12 +3,26 @@
  const btnAgregar = document.getElementById("agregar");
  const contenedorLista = document.getElementById("lista");
 
- btnAgregar.addEventListener("click", function(){
-    const elementoListado = prompt("Introduce el nombre del país o ciudad");  
-    const destino = document.createElement("li");
-    destino.innerText = elementoListado; 
-    contenedorLista.appendChild(destino);
- })
+ function addList () {
+   const ciudad = prompt("Introduce el nombre del país o ciudad");  
+   if (ciudad){
+      const li = document.createElement ("li");
+      li.textContent = ciudad;
+      contenedorLista.appendChild(li)
+   }else{
+      alert("Por favor ingrese un elemento válido")
+   }
+   
+   
+   /*
+   const destino = document.createElement("li");
+   destino.innerText = ciudad; 
+   contenedorLista.appendChild(destino);
+   */
+ }
+ 
+ 
+ btnAgregar.addEventListener("click", addList)
 
 
 

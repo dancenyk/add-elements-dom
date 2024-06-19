@@ -54,34 +54,76 @@ h1{
 }
 
 .master{
-	height: 830px;
-	width: 100%;
+	height: 100vh;
 	background-image: url("../img/map.jpg");	
-	background-repeat: no-repeat;
-    position: relative;
+	background-size: cover;
+	
 }
 
 .masterBlur{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #00000080;
 }
 
 .textContainer{
 	position: absolute;
-	width: 400px;
+	width: 600px;
 	top: 40%;
 	left: 40%;
 }
 
-.textContainer h1, div{
+.textContainer h1{
+	font-size: 50px;
+	padding: 20px;
 	color: white;
 }
 
+.textContainer ul{
+	width: 100%;
+	
+}
+
+.textContainer li{
+	padding: 20px 10px;
+	list-style: none;
+	background-color: #ffffff16;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	font-weight: bold;
+	font-size: 20px;
+	color: aliceblue;
+	text-align: center;
+}
+
+.textContainer li:first-child{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.textContainer li:last-child{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+
 #agregar{
+	padding: 10px;
+	margin: 10px;
 	background-color: black;
 	color: white;
 	border: none;
-	border-radius: 10%;
+	border-radius: 50px;
+	transition: all .5s ease;
+	cursor: pointer;
 }
+
+#agregar:hover{
+	background-color:#c38b45;
+}
+
+
 
 
 
